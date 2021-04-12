@@ -24,8 +24,14 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.button_first).setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        view.findViewById<Button>(R.id.button).setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_ButtonsFragment)
+        }
+        view.findViewById<Button>(R.id.button2).setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_FildsFragment)
+        }
+        view.findViewById<Button>(R.id.button3).setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_CheckBoxFragment)
         }
     }
 }
